@@ -1,0 +1,106 @@
+/* Style für die Pictures and Quotes-Seite - Desktop */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+/* wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    margin: 2rem;
+}
+
+/* grid für die Bilder */
+main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: 
+        "pic1 pic2"
+        "pic3 pic4"
+        "script script";
+}
+
+#pic1 {
+    grid-area: pic1;
+}
+
+#pic2 {
+    grid-area: pic2;
+}
+
+#pic3 {
+    grid-area: pic3;
+}
+
+#pic4 {
+    grid-area: pic4;
+}
+
+#script {
+    grid-area: script;
+}
+
+#logo {
+    width: 30px;
+}
+
+/* Bilder werden vergrößert, wenn man darüber hovert */
+.pichover:hover {
+    transform: scale(1.75);
+}
+
+/* 2. Schrift allgemein*/
+
+h1 {
+    font-size: 3rem;
+}
+
+div a {
+    font-size: 2rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption, #script {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+footer {
+    font-size: 1.5rem;
+}

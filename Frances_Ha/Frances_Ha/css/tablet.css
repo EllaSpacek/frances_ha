@@ -1,0 +1,84 @@
+/* Style für die Frances-Seite - Tablet */
+
+/* 1. Layout (position, display, margin, padding, width, height*/
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+/* wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+main {
+    grid-area: main;
+}
+
+p, #iframediv {
+    text-align: center;
+    padding: 2rem;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* 2. Tabellen */
+
+/* zentriert die Tabelle */
+table {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+caption {
+    margin-top: 2rem;;
+}
+
+caption, td, th {
+    padding: 1rem;
+}
+
+/* 3. Schrift allgemein */
+
+h1 {
+    font-size: 2rem;
+}
+
+div a, p, caption {
+    font-size: 1.5rem;
+}
+
+td, td a, th, footer {
+    font-size: 1.25rem;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Frances Ha - What's next?</title>
+        <link rel="stylesheet" href="css/whats_next.css">
+        <link rel="icon" href="../Images/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <!-- ============================ body ==================================== -->
+    <body>
+        <!-- ============================ header ==================================== -->
+        <header>
+            <h1>What's next?</h1>
+        </header>
+        <!-- ============================ nav ==================================== -->
+        <nav>
+            <div>
+                <a href="../Frances_Ha/frances_ha.html">Frances Ha</a>
+                <a href="../Noah/noah.html">Noah Baumbach</a>
+                <a href="../Greta/greta.html">Greta Gerwig</a>
+                <a href="../Pics_and_Quotes/pics_and_quotes.html">Pictures and Quotes</a>
+                <a id="aktuell">What's next?</a>
+            </div>
+        </nav>
+        <!-- ============================ main ==================================== -->
+        <main>
+            <h2>
+                Which movie deserves its own website?
+                <br>
+                Which traits should it have?
+            </h2>
+            <!-- ============================ form ==================================== -->
+            <form method="GET" id="movie">
+                <!-- ============================ Textfeld ==================================== -->
+                <fieldset>
+                    <legend>Do you have a specific movie in mind?</legend>
+                    <label for="title">Title:</label>
+                    <input type="text" id="title" name="title">
+                </fieldset>
+                <!-- ============================ Radio buttons - nur einer auswählbar ==================================== -->
+                <fieldset>
+                    <legend>Maybe you prefer black and white movies?</legend>
+                    <div id="bw">
+                        <label for="bnw" id="bnwlabel">Black and White:</label>
+                        <input type="radio" name="colored" id="bnw" value="bnw">
+                        <label for="color" id="colorlabel">Color:</label>
+                        <input type="radio" name="colored" id="color" value="color">
+                        <label for="matter" id="matterlabel">Does not matter:</label>
+                        <input type="radio" name="colored" id="matter" value="matter">
+                    </div>
+                </fieldset>
+                <!-- ============================ Checkbox mehrere wählbar ==================================== -->
+                <fieldset>
+                    <legend id="genrelegend">Genre</legend>
+                    <div id="genrecheckbox">
+                        <label for="horror" id="horrorlabel">Horror:</label>
+                        <input type="checkbox" name="genre" id="horror" value="horror">
+                        <label for="scifi" id="scifilabel">SciFi:</label>
+                        <input type="checkbox" name="genre" id="scifi" value="scifi">
+                        <label for="crime" id="crimelabel">Crime:</label>
+                        <input type="checkbox" name="genre" id="crime" value="crime"> 
+                        <label for="drama" id="dramalabel">Drama:</label>
+                        <input type="checkbox" name="genre" id="drama" value="drama"> 
+                        <label for="comedy" id="comedylabel">Comedy:</label>
+                        <input type="checkbox" name="genre" id="comedy" value="comedy">
+                        <label for="musical" id="musicallabel">Musical:</label>
+                        <input type="checkbox" name="genre" id="musical" value="musical">
+                        <label for="documentary" id="documentarylabel">Documentary:</label>
+                        <input type="checkbox" name="genre" id="documentary" value="documentary"> 
+                    </div>   
+                </fieldset>
+                <!-- ============================ Slider ==================================== -->
+                <fieldset>
+                    <legend>IMDb score (0-10)</legend>
+                    <input type="range" min="0" max="10" name="imdb" id="imdb" oninput="this.nextElementSibling.value = this.value">
+                    <output>5</output>
+                </fieldset>
+                <!-- ============================ Jahreszahl ==================================== -->
+                <fieldset>
+                    <legend>Year of release:</legend>
+                    <input type="number"  min="1888" max="2021" step="1" value="2021">
+                </fieldset>
+                <!-- ============================ Textfeld mit Vorschlägen (datalist) ==================================== -->
+                <fieldset>
+                    <legend>What was the best movie of 2020?</legend>
+                    <br>
+                    <input list="bestm" name="best" id="best">
+                </fieldset>
+                <datalist id="bestm">
+                    <option value="Tenet">
+                    <option value="I Care A Lot">
+                    <option value="The Lodge">
+                    <option value="I'm Thinking of Ending Things">
+                    <option value="Martin Eden">
+                    <option value="Come to Daddy">
+                    <option value="Color Out of Space"></option>
+                    <option value="Kajillionaire"></option>
+                    <option value="Possessor"></option>
+                </datalist>
+                <!-- ============================ Dropdown - mehrere wählbar ==================================== --> 
+                <fieldset>
+                    <legend>
+                        Actors and Actresses you'd like to see
+                        <br>
+                        (press ctrl to select multiple):
+                    </legend>
+                    <select name="act" id="act" size="8" multiple>
+                        <optgroup label="Actresses">
+                            <option value="cate">Cate Blanchett</option>
+                            <option value="yvonne">Yvonne Strahovski</option>
+                            <option value="rosamund">Rosamund Pike</option>
+                            <option value="andrea">Andrea Riseborough</option>
+                        </optgroup>
+                        <optgroup label="Actors">
+                            <option value="elijah">Elijah Wood</option>
+                            <option value="nicolas">Nicolas Cage</option>
+                            <option value="robert">Robert Pattinson</option>
+                            <option value="willem">Willem Dafoe</option>
+                        </optgroup>
+                    </select>
+                </fieldset>
+                <!-- ============================ mehrzeiliges Textfeld ==================================== -->
+                <fieldset>
+                    <legend>Any other traits that are a must?</legend>
+                    <textarea name="other" id="other"></textarea>
+                </fieldset>
+                <!-- ============================ Submit-Button ==================================== -->
+                <div id="submitdiv">
+                    <input type="submit" name="submit" value="Submit" id="submit">
+                </div>
+            </form> 
+        </main>
+        <!-- ============================ footer ==================================== -->
+        <footer>
+            <picture>
+                <source srcset="../Images/heart-250px.png" media="(min-width:801px)">
+                <source srcset="../Images/heart-150px.png" media="(min-width:416px)">
+                <img src="../Images/heart-75px.png" alt="Heart" id="heart">
+            </picture>
+            <p>&copy; <time datetime="2021">2021</time> Elenna</p>
+        </footer>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

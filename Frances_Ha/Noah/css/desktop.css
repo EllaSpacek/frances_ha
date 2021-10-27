@@ -1,0 +1,67 @@
+/* Style für die Noah-Seite - Desktop */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+/* wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    margin: 2rem;
+}
+
+main {
+    grid-area: main;
+}
+
+/* Bild wird rechts positioniert und die Schrift läuft drumherum */
+#img {
+    float: right;
+}
+
+/* 3. Schrift allgemein */
+
+h1 {
+    font-size: 3rem;
+}
+
+div a, li {
+    font-size: 2rem;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+footer {
+    font-size: 1.5rem;
+}

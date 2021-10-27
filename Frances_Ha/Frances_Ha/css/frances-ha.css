@@ -1,0 +1,80 @@
+/* Style für die Frances-Seite  */
+
+/* import von Farben, Fonts und den CSS-Files für die Desktop-, Tablet- und Mobile-Varianten */
+@import url(../../css/sanitize.css);
+@import url(../../css/colors.css);
+@import url(../../Fonts/fonts.css);
+@import url(mobile.css) only screen and (max-width:415px);
+@import url(tablet.css) only screen and (min-width:416px) and (max-width:800px); 
+@import url(desktop.css) only screen and (min-width:801px);
+
+/* 1. Farben, Text-Dekorationen, Borders */
+
+header, nav {
+   background-color: var(--pinkig);
+   color: var(--quasiweiss);
+}
+
+main, footer {
+   background-color: var(--quasischwarz);
+   color: var(--quasiweiss);
+}
+
+/* nur die Links im Menü sollen dunkel werden, wenn man darüber hovert */
+div a:hover {
+   color: var(--quasischwarz);
+}
+
+/* die Links in der Tabelle bleiben hell, wenn man über sie hovert */
+td a:hover {
+   color: var(--quasiweiss);
+}
+
+/* Links, die noch nicht oder schon besucht wurden, sehen gleich aus */
+a, a:visited {
+   color: var(--quasiweiss);
+   text-decoration: none;
+}
+
+/* Links über die man hovert, werden untersrichen */
+a:hover {
+   text-decoration: underline;
+}
+
+/* die Seite auf der wir sind, wird nicht verlinkt, bekommt eine dunkle Schrift und wird unterstrichen*/
+#aktuell {
+   color: var(--quasischwarz);
+   text-decoration: underline;
+}
+
+td {
+   text-align: center;
+}
+
+.headfoot {
+   border-top: 3px solid var(--quasiweiss);
+}
+
+/* 2. Footer - Layout */
+
+/* Inhalt wird untereinander dargestellt */
+footer {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+picture {
+   text-align: center;
+}
+
+/* 3. Cursor - wird zur deutenden Hand */
+a:hover, #heart:hover {
+   cursor: pointer;
+}
+
+/* 4. Wörter werden nicht unsinnig gebrochen */
+body {
+   word-break: normal;
+}
+

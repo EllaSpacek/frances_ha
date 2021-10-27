@@ -1,0 +1,218 @@
+/* Style für die What's next-Seite - Mobile */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header" 
+    "nav"
+    "main"
+    "footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+/* ELemente werden untereinander angezeigt */
+nav div {
+    display: flex;
+    flex-direction: column;
+}
+
+div a {
+    padding: 1rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+/* 2. form */
+
+/* Grid für die Farben-Frage */
+#bw {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "bnwlabel bnw colorlabel color"
+        "matterlabel matterlabel matter .";
+}
+
+#bnwlabel {
+    grid-area: bnwlabel;
+}
+
+#bnw {
+    grid-area: bnw;
+    justify-self: center;
+    align-self: center;
+}
+
+#colorlabel {
+    grid-area: colorlabel;
+}
+
+#color {
+    grid-area: color;
+    justify-self: center;
+    align-self: center;
+}
+
+#matterlabel {
+    grid-area: matterlabel;
+}
+
+#matter {
+    grid-area: matter;
+    justify-self: center;
+    align-self: center;
+}
+
+/* grid für die Genrecheckboxen */
+#genrecheckbox {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+        "horrorlabel horror scifilabel scifi"
+        "crimelabel crime dramalabel drama"
+        "comedylabel comedy musicallabel musical"
+        "documentarylabel documentarylabel documentary  .";
+} 
+
+
+#horrorlabel {
+    grid-area: horrorlabel;
+}
+
+#horror {
+    grid-area: horror;
+    justify-self: center;
+    align-self: center;
+}
+
+#scifilabel {
+    grid-area: scifilabel;
+}
+
+#scifi {
+    grid-area: scifi;
+    justify-self: center;
+    align-self: center;
+}
+
+#crimelabel {
+    grid-area: crimelabel;
+}
+
+#crime {
+    grid-area: crime;
+    justify-self: center;
+    align-self: center;
+}
+
+#dramalabel {
+    grid-area: dramalabel;
+}
+
+#drama {
+    grid-area: drama;
+    justify-self: center;
+    align-self: center;
+}
+
+#comedylabel {
+    grid-area: comedylabel;
+}
+
+#comedy {
+    grid-area: comedy;
+    justify-self: center;
+    align-self: center;
+}
+
+#musicallabel {
+    grid-area: musicallabel;
+}
+
+#musical {
+    grid-area: musical;
+    justify-self: center;
+    align-self: center;
+}
+
+#documentarylabel {
+    grid-area: documentarylabel;
+}
+
+#documentary {
+    grid-area: documentary;
+    justify-self: center;
+    align-self: center;
+}
+
+form {
+    text-align: center;
+}
+
+fieldset {
+    margin-top: 2rem;
+}
+
+#bnw, #color, #matter, #horror, #scifi, #crime, #drama, #comedy, #musical, #documentary {
+    margin-right: 1rem;
+}
+
+/* Textfeld-Größe */
+#other {
+    width: 200px;
+    height: 100px;
+}
+
+ #submitdiv {
+    text-align: center;
+    margin-top: 1rem;
+ }
+
+/* 2. Schrift allgemein */
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+    text-align: center;
+    padding-left: 1rem;
+}
+
+legend {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+input, label, option, textarea, div a {
+    font-size: 1.25rem;
+}
+
+optgroup {
+    font-size: 1rem;
+}
+
+footer {
+    font-size: 1rem;
+}
+

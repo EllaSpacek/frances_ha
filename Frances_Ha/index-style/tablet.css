@@ -1,0 +1,41 @@
+/* Style für die Index-Seite - Tablet */
+
+/* 1. Layout - margin und padding */
+h1 {
+    margin-top: 3rem; 
+    margin-bottom: 1rem;
+}
+
+h2, q {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem; 
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+#enterbutton {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+}
+
+/* 2. Schrift und Text-Dekorationen*/
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+#enterbutton, q {
+    font-size: 2rem;
+    text-decoration: none;
+}

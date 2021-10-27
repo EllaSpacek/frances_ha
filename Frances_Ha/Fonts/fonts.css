@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+    font-family: 'Viaoda Libre';
+    src: url("ViaodaLibre-Regular.ttf") format("TrueType"),
+         url("webfontkit-20210616-074014/viaodalibre-regular.woff2") format('woff2'),
+         url("webfontkit-20210616-074014/viaodalibre-regular.woff") format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url("RobotoMono-VariableFont_wght.ttf") format("TrueType");
+}
+
+
+
+body {
+    font-family: 'Viaoda Libre', cursive;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+}
+
+button, a, option, optgroup, textarea, input, caption, td, th {
+    font-family: 'Roboto Mono', monospace;
+}
+

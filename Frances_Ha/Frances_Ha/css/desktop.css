@@ -1,0 +1,99 @@
+/* Style für die Frances-Seite - Desktop */
+
+/* 1. Layout (position, display, margin, padding, width, height*/
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+/* Navigation wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    margin: 2rem;
+}
+
+main {
+    grid-area: main;
+}
+
+p {
+    text-align: center;
+    padding: 2rem;
+}
+
+#iframediv {
+    padding: 2rem;
+    text-align: center;
+}
+
+iframe {
+    width: 560px;
+    height: 315px;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* 2. Tabelle */
+
+/* damit die Tabellen nebeneinander angezeigt werden */
+#tablediv {
+    display: flex;
+}
+
+/* zentriert die Tabellen */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption {
+    border-bottom: 3px solid var(--quasiweiss);
+}
+
+caption, td, th {
+    padding: 1rem;
+}
+
+/* 3. Schrift allgemein */
+
+h1 {
+    font-size: 3rem;
+}
+
+div a, caption, th{
+    font-size: 2rem;
+}
+
+p, td, footer, td a {
+    font-size: 1.5rem;
+}

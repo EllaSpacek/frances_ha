@@ -1,0 +1,37 @@
+/* Style für die Index-Seite - Mobile */
+
+/* 1. Layout - margin und padding */
+
+h1 {
+    margin-top: 3rem; 
+    margin-bottom: 1rem;
+}
+
+#enterbutton {
+    margin-bottom: 2rem;
+    padding: 0.25rem;
+}
+
+q {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* 2. Schrift und Text-Dekorationen*/
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1rem;
+}
+
+#enterbutton, q {
+    font-size: 1rem;
+    text-decoration: none;
+}

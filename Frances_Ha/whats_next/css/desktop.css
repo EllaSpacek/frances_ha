@@ -1,0 +1,104 @@
+/* Style für die What's next-Seite - Desktop */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+/* wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    padding: 2rem;
+}
+
+h2 {
+    margin-top: 1rem;
+}
+
+footer p {
+    padding-top: 2rem;
+}
+
+/* 2. Schrift allgemein */
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+legend {
+    font-size: 2rem;
+    text-align: left;
+}
+
+input, label, option, textarea, div a {
+    font-size: 2rem;
+}
+
+optgroup {
+    font-size: 1.5rem;
+}
+
+footer {
+    font-size: 1.5rem;
+}
+
+/* 3. Form */
+form {
+    text-align: center;
+}
+
+fieldset {
+    margin: 2rem;
+}
+
+#bnw, #color, #matter, #horror, #scifi, #crime, #drama, #comedy, #musical, #documentary {
+    margin-right: 1rem;
+}
+
+/* Textfeld-Größe */
+#other {
+    width: 700px;
+    height: 250px;
+}
+
+/* transition für Submit-Button */
+#submit {
+    transition: background-color 1s;
+}
+
+#submit:hover {
+    background-color: var(--pinkig);
+}

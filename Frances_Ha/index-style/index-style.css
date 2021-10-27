@@ -1,0 +1,56 @@
+/* Style für die Index-Seite */
+
+/* import von Farben, Fonts und den CSS-Files für die Desktop-, Tablet- und Mobile-Variante */
+@import url(../css/sanitize.css);
+@import url(../css/colors.css);
+@import url(../Fonts/fonts.css);
+@import url(mobile.css) only screen and (max-width:415px);
+@import url(tablet.css) only screen and (min-width:416px) and (max-width:800px); 
+@import url(desktop.css) only screen and (min-width:801px);
+
+/* 1. Farben für Hintergrund und Text, so wie Textausrichtungen */
+
+body {
+    background-color: var(--quasischwarz);
+}
+
+h1, #enterbutton {
+    color: var(--pinkig);
+}
+
+h2, h3, q {
+    color: var(--quasiweiss);
+}
+
+q, h1, h2, h3 {
+    text-align: center;
+}
+
+/* 2. Layout  - Flex (damit alles untereinander dargestellt wird*/
+
+body {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	justify-content: center;  
+}
+
+/* 3. Animation - der Kopf bewegt sich auf und ab und bedeckt dabei den Enter-Button */
+
+#frances {
+    animation: francesanimation 5s ease infinite;
+    position: relative;
+}
+
+@keyframes francesanimation {
+    50% {
+        transform: translate(0, -50%);
+    }
+}
+
+
+/* 4. Cursor - wird zur deutenden Hand, wenn man über dem Enter-Button hovert*/
+
+#enterbutton:hover {
+    cursor: pointer;
+}

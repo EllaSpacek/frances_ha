@@ -1,0 +1,86 @@
+/* Style für die Frances-Seite - Mobile */
+
+/* 1. Layout (position, display, margin, padding, width, height*/
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header" 
+    "nav"
+    "main"
+    "footer";   
+}
+
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+    
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+/* display: flex, damit die Elemente untereinander dargestellt werden */
+nav div {
+    display: flex;
+    flex-direction: column;
+}
+
+div a {
+    margin: 1rem;
+}
+
+main {
+    grid-area: main;
+}
+
+p {
+    text-align: center;
+    padding: 1rem;
+}
+
+#iframediv {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    grid-area: footer;
+}
+
+/* 2. Tabellen */
+
+/* zentriert die Tabelle */
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+caption {
+    margin-top: 1rem;;
+}
+
+caption, td, th {
+    padding: 1rem;
+}
+
+/* 3. Schrift allgemein */
+
+h1 {
+    font-size: 1.5rem;
+}
+
+div a, p {
+    font-size: 1.25rem;
+}
+
+td, td a, footer p, caption, th {
+    font-size: 1rem;
+}

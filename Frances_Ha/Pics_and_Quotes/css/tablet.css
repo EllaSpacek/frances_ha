@@ -1,0 +1,106 @@
+/* Style für die Pictures and Quotes-Seite - Tablet */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "nav header" 
+    "nav main"
+    "nav footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav; 
+}
+
+/* wird an der Seite fixiert, 
+display: grid damit die enthaltenen Elemente untereinander angezeigt werden */
+nav div {
+    position: sticky;
+    top: 0;
+
+    display: grid;
+}
+
+div a {
+    margin: 2rem 1rem 2rem 1rem;
+}
+
+/* grid für die Bilder */
+main {
+    grid-area: main;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "pic1" 
+        "pic2"
+        "pic3" 
+        "pic4"
+        "script";
+}
+
+#pic1 {
+    grid-area: pic1;
+}
+#pic2 {
+    grid-area: pic2;
+}
+
+#pic3 {
+    grid-area: pic3;
+}
+
+#pic4 {
+    grid-area: pic4;
+}
+
+#script {
+    grid-area: script;
+}
+
+#logo {
+    width: 30px;
+}
+
+/* das iframe wird in der Tablet-Variante ausgeblendet */
+#iframepdf {
+    display: none;
+}
+
+/* 2. Schrift allgemein */
+
+h1 {
+    font-size: 2rem;
+}
+
+div a {
+    font-size: 1.5rem;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption, #script {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer {
+    font-size: 1.25rem;
+}

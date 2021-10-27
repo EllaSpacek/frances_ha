@@ -1,0 +1,69 @@
+/* Style für die Haupt-Seite - Mobile */
+
+/* 1. Layout - display, position, float etc. */
+
+/* display: grid um die inneren Elemente zu platzieren */
+body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "header" 
+    "nav"
+    "main"
+    "footer";   
+}
+
+/* header bleibt auch beim Scrollen oben fixiert */
+header {
+    grid-area: header;
+    position: sticky;
+    top: 0;
+
+    grid-area: header;
+
+    text-align: center;
+}
+
+nav {
+    grid-area: nav;
+}
+
+/* damit die Elemente untereinander angezeigt werden */
+nav div {
+    display: flex;
+    flex-direction: column;
+}
+
+div a {
+    margin: 1rem;
+}
+
+main {
+    grid-area: main;
+}
+
+/* damit es zentriert wird */
+#img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    grid-area: footer;
+    padding-top: 1rem;
+}
+
+/* 3. Schrift allgemein */
+
+h1 {
+    font-size: 1.5rem;
+}
+
+div a, li {
+    font-size: 1.25rem;
+}
+
+footer {
+    font-size: 1rem;
+}

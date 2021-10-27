@@ -1,0 +1,83 @@
+/* Style für die Noah-Seite  */
+
+/* import von Farben, Fonts und den CSS-Files für die Desktop-, Tablet- und Mobile-Varianten */
+@import url(../../css/sanitize.css);
+@import url(../../css/colors.css);
+@import url(../../Fonts/fonts.css);
+@import url(mobile.css) only screen and (max-width:415.5px);
+@import url(tablet.css) only screen and (min-width:416px) and (max-width:800px); 
+@import url(desktop.css) only screen and (min-width:801px);
+
+/* 1. Farben und Text-Dekoration */
+
+header, nav {
+   background-color: var(--pinkig);
+   color: var(--quasiweiss);
+}
+
+main, footer {
+   background-color: var(--quasischwarz);
+   color: var(--quasiweiss);
+}
+
+/* Links, die noch nicht oder schon besucht wurden, sehen gleich aus */
+div a, div a:visited {
+   color: var(--quasiweiss);
+   text-decoration: none;
+}
+
+/* die Links im Menü sollen dunkel werden, wenn man darüber hovert */
+div a:hover {
+   color: var(--quasischwarz);
+   text-decoration: underline;
+}
+
+/* die Seite auf der wir sind, wird nicht verlinkt, bekommt eine dunkle Schrift und wird unterstrichen*/
+#aktuell {
+   color: var(--quasischwarz);
+   text-decoration: underline;
+}
+
+/* einzelne lis werden unterstrichen */
+span {
+   text-decoration: underline;
+}
+
+/* 2. Footer - Layout */
+
+/* Inhalt wird untereinander dargestellt */
+footer {
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+}
+
+picture {
+   text-align: center;
+}
+
+/* 3. Liste */
+
+ul {
+   list-style-type: circle;
+}
+
+ol {
+   list-style-type: lower-alpha;
+}
+
+li {
+   margin: 1rem;
+}
+
+/* 4. Cursor - wird zur deutenden Hand */
+
+a:hover, #heart:hover {
+   cursor: pointer;
+}
+
+/* 5. damit Wörter nicht unsinnig gebrochen werden */
+
+body {
+   word-break: normal;
+}

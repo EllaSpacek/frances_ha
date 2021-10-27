@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Frances Ha</title>
+        <link rel="stylesheet" href="index-style/index-style.css">
+        <link rel="icon" href="Images/icon.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <!-- ============================ body ==================================== -->
+    <body>
+        <h1>Frances Ha</h1>
+        <h2>by Noah Baumbach</h2>
+        <h3>with Greta Gerwig</h3>
+        <q>
+            I'm so embarrassed.
+            <br>
+            I'm not a real person yet.
+        </q>
+        <form method="GET" action="Frances_Ha/frances_ha.html">
+            <input type="submit" value="enter" id="enterbutton">
+        </form>
+        <picture>
+            <source srcset="Images/face4.png" media="(min-width:801px)">
+            <source srcset="Images/face4-500px.png" media="(min-width:416px)">
+            <img src="Images/face4-300px.png" alt="head of Frances" id="frances">
+        </picture>
+        <!-- um das Blocken von autoplay zu verhindern, funktioniert aber nicht -->
+        <iframe src="audio/silence.mp3" allow="autoplay" style="display: none"></iframe>
+        <!-- Autoplay wird von den Browsern unterdrückt, bitte unmuten-->
+        <audio   id="audio" autoplay>
+            <source src="audio/soundtrack.mp3" type="audio/mpeg">
+            Your browser cannot display the audio element. Please update your browser.
+        </audio>
+    </body>
+</html>
